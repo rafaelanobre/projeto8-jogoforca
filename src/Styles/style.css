@@ -1,0 +1,72 @@
+*{
+	box-sizing: border-box;
+    font-family: 'Roboto';
+}
+body{
+    padding: 8%;
+}
+#top-div{
+    display: flex;
+}
+#left-game-div{
+    width: 50%;
+}
+#right-game-div{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: space-between;
+}
+#left-game-div img{
+    width: 50%;
+}
+#right-game-div button{
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 700;
+    background-color: #27AE60;
+    border-radius: 8px;
+    border: none;
+    padding: 22px;
+    padding-top: 17px;
+    padding-bottom: 17px;
+}
+#right-game-div button {
+    cursor: pointer;
+}
+.game-word{
+    font-family: 'Noto Sans';
+    font-size: 50px;
+    font-weight: 700;
+    letter-spacing: 0.115em;
+}
+#keyboard-container{
+    padding-top: 5%;
+    display: flex;
+    justify-content: center;
+}
+#keyboard{
+    display: grid;
+    grid-template-columns: repeat(13, 1fr);
+    gap: 12px;
+    padding: 12px;
+}
+.key{
+    font-size: 20px;
+    font-weight: 700;
+    width: 50px;
+    height: 50px;
+    background: #E1ECF4;
+    border: 1px solid #7AA7C7;
+    border-radius: 3px;
+    color: #39739D;
+}
+.key:hover {
+    cursor: pointer;
+}
+.key:disabled {
+    background: #9FAAB5;
+    cursor: not-allowed;
+    color: #798A9F;
+}
