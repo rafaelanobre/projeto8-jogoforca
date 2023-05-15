@@ -29,21 +29,35 @@ export default function Jogo({ contador, setContador, habilitarKeys, setHabilita
         setLetrasSelecionadas([]);
     };
 
+    const verificarPalavraCompleta = () => {
+        return palavraSorteada.every((letra) => letrasSelecionadas.includes(letra.toLowerCase()));
+    };
+
     return (
         <div id="top-div">
-        <div id="left-game-div">
-            <img src={imagens[contador]} alt="imagem da forca" />
-        </div>
-        <div id="right-game-div">
-            <button onClick={sortearPalavra}>Escolher Palavra</button>
-            <div className="game-word">
-            {palavraSorteada.map((letra, index) => (
-                <span key={index}>
-                {letrasSelecionadas.includes(letra.toLowerCase()) ? letra : '_'}
-                </span>
-            ))}
+            <div id="left-game-div">
+                <img src={imagens[contador]} alt="imagem da forca" />
             </div>
-        </div>
+            <div id="right-game-div">
+                <button onClick={sortearPalavra}>Escolher Palavra</button>
+                <div className="game-word">
+                    {palavraSorteada.map((letra, index) => (
+                        <span
+                            key={index}
+                            style={{
+                                color:
+                                    verificarPalavraCompleta() || contador >= 6
+                                        ? contador >= 6 ? 'red' : 'green'
+                                        : letrasSelecionadas.includes(letra.toLowerCase())
+                                            ? 'black'
+                                            : 'black',
+                            }}
+                        >
+                            {letrasSelecionadas.includes(letra.toLowerCase()) || contador >= 6 ? letra : '_'}
+                        </span>
+                    ))}
+                </div>
+            </div>
         </div>
     );
 }
