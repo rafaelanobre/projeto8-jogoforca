@@ -27,6 +27,7 @@ export default function Letras({ contador, habilitarKeys, letrasSelecionadas, pa
                         className="key"
                         key={letra}
                         onClick={() => handleClick(letra)}
+                        data-test="letter"
                     >
                         {letra.toUpperCase()}
                     </button>

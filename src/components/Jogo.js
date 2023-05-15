@@ -36,11 +36,11 @@ export default function Jogo({ contador, setContador, habilitarKeys, setHabilita
     return (
         <div id="top-div">
             <div id="left-game-div">
-                <img src={imagens[contador]} alt="imagem da forca" />
+                <img src={imagens[contador]} alt="imagem da forca" data-test="game-image" />
             </div>
             <div id="right-game-div">
-                <button onClick={sortearPalavra}>Escolher Palavra</button>
-                <div className="game-word">
+                <button onClick={sortearPalavra} data-test="choose-word">Escolher Palavra</button>
+                <div className="game-word" data-test="word">
                     {palavraSorteada.map((letra, index) => (
                         <span
                             key={index}
