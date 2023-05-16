@@ -70,3 +70,143 @@ body{
     cursor: not-allowed;
     color: #798A9F;
 }
+
+@media screen and (min-width: 480px) and (max-width: 800px){
+    body{
+        padding: 4%;
+    }
+
+    #top-div{
+        display: flex;
+        flex-direction: column;
+    }
+    #left-game-div{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 5%;
+    }
+    #right-game-div{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+    #left-game-div img{
+        width: 180px;
+    }
+    #right-game-div button{
+        color: #ffffff;
+        font-size: 20px;
+        font-weight: 700;
+        background-color: #27AE60;
+        border-radius: 8px;
+        border: none;
+        padding: 22px;
+        padding-top: 17px;
+        padding-bottom: 17px;
+        margin-bottom: 5%;
+    }
+    .game-word{
+        font-family: 'Noto Sans';
+        font-size: 42px;
+        font-weight: 700;
+        letter-spacing: 0.115em;
+    }
+    #keyboard-container{
+        padding-top: 5%;
+        display: flex;
+        justify-content: center;
+    }
+    #keyboard{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        gap: 12px;
+        padding: 12px;
+        justify-items: center;
+    }
+    .key{
+        font-size: 20px;
+        font-weight: 700;
+        width: 2.5em;
+        height: 2.5em;
+        background: #E1ECF4;
+        border: 1px solid #7AA7C7;
+        border-radius: 3px;
+        color: #39739D;
+    }
+}
+
+@media screen and (max-width: 480px){
+    body{
+        padding: 4%;
+    }
+
+    #top-div{
+        display: flex;
+        flex-direction: column;
+    }
+    #left-game-div{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 5%;
+    }
+    #right-game-div{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+    #left-game-div img{
+        width: 180px;
+    }
+    #right-game-div button{
+        color: #ffffff;
+        font-size: 20px;
+        font-weight: 700;
+        background-color: #27AE60;
+        border-radius: 8px;
+        border: none;
+        padding: 22px;
+        padding-top: 17px;
+        padding-bottom: 17px;
+        margin-bottom: 5%;
+    }
+    .game-word{
+        font-family: 'Noto Sans';
+        font-size: 42px;
+        font-weight: 700;
+        letter-spacing: 0.115em;
+    }
+    #keyboard-container{
+        padding-top: 5%;
+        display: flex;
+        justify-content: center;
+    }
+    #keyboard{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        gap: 8px;
+        padding: 8px;
+        justify-items: center;
+    }
+    .key{
+        font-size: 20px;
+        font-weight: 700;
+        width: 2em;
+        height: 2em;
+        background: #E1ECF4;
+        border: 1px solid #7AA7C7;
+        border-radius: 3px;
+        color: #39739D;
+    }
+}
